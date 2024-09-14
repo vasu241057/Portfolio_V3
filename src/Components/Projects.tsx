@@ -15,7 +15,7 @@ interface Project {
 const projects: Project[] = [
   {
     name: "E-commerce",
-    imageSrc: "/public/e-commerce.jpg",
+    imageSrc: "/e-commerce.jpg",
     githubLink: "https://github.com/vasu241057/e-commerce",
     projectLink: "https://e-commerce-vasu.vercel.app/",
     codeExplanation: "e-Shopping is an e-commerce platform for",
@@ -23,7 +23,7 @@ const projects: Project[] = [
   },
   {
     name: "Image processing",
-    imageSrc: "/public/Image-processing.png",
+    imageSrc: "/Image-processing.png",
     githubLink: "https://github.com/vasu241057/image-processing-frontend",
     projectLink: "https://image-processing-frontend-9dsj.vercel.app/",
     codeExplanation: "A system for processing, compressing, and uploading",
@@ -31,7 +31,7 @@ const projects: Project[] = [
   },
   {
     name: "Paytm Clone",
-    imageSrc: "/public/paytm.jpg",
+    imageSrc: "/paytm.jpg",
     githubLink: "https://github.com/vasu241057/paytm-fullstack",
     projectLink: "https://paytm-vasu.vercel.app/",
     codeExplanation: "MERN stack app with user signup/signin, secure",
@@ -39,7 +39,7 @@ const projects: Project[] = [
   },
   {
     name: "Recipe app",
-    imageSrc: "/public/Recipe.jpg",
+    imageSrc: "/Recipe.jpg",
     githubLink: "hhttps://github.com/vasu241057/Recipe-app",
     projectLink: "https://vasu241057.github.io/Recipe-app/",
     codeExplanation: "web app for searching recipe of a food item &",
@@ -137,7 +137,7 @@ const ProjectsSection: React.FC<HeroProps> = ({ isVisible }) => {
                         }`}
                       >
                         <img
-                          src="/public/github-svgrepo-com.svg"
+                          src="/github-svgrepo-com.svg"
                           alt="GitHub"
                           width="20"
                           height="20"
@@ -154,7 +154,7 @@ const ProjectsSection: React.FC<HeroProps> = ({ isVisible }) => {
                         }`}
                       >
                         <img
-                          src="/public/external-link-svgrepo-com.svg"
+                          src="/external-link-svgrepo-com.svg"
                           alt="GitHub"
                           width="20"
                           height="20"
