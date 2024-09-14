@@ -86,7 +86,7 @@ const HeroSection: React.FC<HeroProps> = ({ isVisible }) => {
         >
           <img
             loading="lazy"
-            src="/public/Profile-image.jpeg"
+            src="/Profile-image.jpeg"
             alt="Julia Huang's AI-driven architectural design"
             className="object-cover w-full h-full rounded-3xl"
           />
