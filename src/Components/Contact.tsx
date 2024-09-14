@@ -22,7 +22,7 @@ const ContactSection: React.FC<HeroProps> = ({ isVisible }) => {
   }, [isVisible]);
 
   const handleEmailClick = () => {
-    window.location.href = "mailto:vasu.khandelwal08.com";
+    window.location.href = "mailto:vasu.khandelwal08@gmail.com";
   };
 
   return (
