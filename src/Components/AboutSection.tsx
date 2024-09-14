@@ -32,7 +32,7 @@ const AboutSection: React.FC<HeroProps> = ({ isVisible }) => {
         transformOrigin: "100% 0%",
       }}
     >
-      <div className="flex flex-col justify-between h-full p-6 bg-red-100 rounded-3xl">
+      <div className="flex flex-col justify-between h-full p-6 bg-gray-100 rounded-3xl">
         <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/a297902af0cf02040270f1c6cf286683f019b463133a44fe6e198d89790d4538?placeholderIfAbsent=true&apiKey=82a1a1af3ce94a618a51fd1a3ee38d91"
@@ -46,9 +46,10 @@ const AboutSection: React.FC<HeroProps> = ({ isVisible }) => {
             showText ? "opacity-100" : "opacity-0"
           }`}
         >
-          Julia Huang is an innovative AI artist, renowned for blending
-          cutting-edge technology with creative expression. Based in LA, she
-          crafts unique digital art experiences accessible
+          Full-stack dev from Jaipur. , NodeJS, Nest expert,ReactJS, NextJS
+          ,Go,. Database whiz. Competitive coder. Curiosity-driven
+          problem-solver. Let's build something remarkable – no peacock dance
+          required.
         </p>
       </div>
     </section>

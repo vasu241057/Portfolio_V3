@@ -22,7 +22,7 @@ const Header: React.FC<HeroProps> = ({ isVisible }) => {
 
   return (
     <header
-      className={`flex overflow-hidden flex-col justify-center mt-1 px-6 py-7 w-full font-light text-black bg-red-100 rounded-3xl max-md:px-5 max-md:max-w-full transition-all duration-[1500ms] ease-in-out ${
+      className={`flex overflow-hidden flex-col justify-center mt-1 px-6 py-7 w-full font-light text-black bg-gray-100 rounded-3xl max-md:px-5 max-md:max-w-full transition-all duration-[1500ms] ease-in-out ${
         animation === "initial"
           ? "scale-x-0 scale-y-0 opacity-0"
           : "scale-x-1 scale-y-1 opacity-100"
@@ -37,8 +37,8 @@ const Header: React.FC<HeroProps> = ({ isVisible }) => {
             showText ? "opacity-100" : "opacity-0"
           }`}
         >
-          <span className="italic">JULIA</span>{" "}
-          <span className="font-medium">HUANG</span>
+          <span className="italic">Vasu</span>{" "}
+          <span className="font-medium">Khandelwal</span>
         </h1>
         <nav
           className={`flex flex-col self-stretch my-auto text-base whitespace-nowrap min-w-[240px] w-[303px] transition-opacity duration-500 ${
@@ -47,8 +47,13 @@ const Header: React.FC<HeroProps> = ({ isVisible }) => {
         >
           <ul className="flex gap-10 justify-between items-center">
             <li>
-              <a href="#projects" className="self-stretch my-auto">
-                PROJECTS
+              <a
+                href="https://drive.google.com/file/d/194JC9ad6QIQvzWhL8MX6YSyc6iAx3421/view?usp=sharing"
+                className="self-stretch my-auto"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                RESUME
               </a>
             </li>
             <li>

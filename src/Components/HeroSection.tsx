@@ -41,7 +41,7 @@ const HeroSection: React.FC<HeroProps> = ({ isVisible }) => {
     <section className="h-full relative">
       <div className="flex h-full gap-5 max-md:flex-col">
         <div
-          className={`flex flex-col w-[63%] max-md:w-full h-full bg-red-100 rounded-3xl text-black overflow-hidden transition-all duration-[1500ms] ease-in-out ${
+          className={`flex flex-col w-[63%] max-md:w-full h-full bg-gray-100 rounded-3xl text-black overflow-hidden transition-all duration-[1500ms] ease-in-out ${
             animation === "initial"
               ? "scale-x-0 scale-y-0 opacity-0"
               : animation === "revealing"
@@ -66,9 +66,11 @@ const HeroSection: React.FC<HeroProps> = ({ isVisible }) => {
                 showText ? "opacity-100" : "opacity-0"
               }`}
             >
-              Artist Redefining{" "}
-              <span className="italic font-light">Architecture</span> with
-              AI-Driven Design
+              Backend Engineer
+              <span className="text-lg italic font-light">ok, Got it</span>
+              <br />
+              FullStack
+              <span className="italic font-light"> Engineer</span>
             </h2>
           </div>
         </div>

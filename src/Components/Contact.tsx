@@ -21,6 +21,10 @@ const ContactSection: React.FC<HeroProps> = ({ isVisible }) => {
     }
   }, [isVisible]);
 
+  const handleEmailClick = () => {
+    window.location.href = "mailto:vasu.khandelwal08.com";
+  };
+
   return (
     <section
       id="contact"
@@ -32,8 +36,9 @@ const ContactSection: React.FC<HeroProps> = ({ isVisible }) => {
       style={{
         transformOrigin: "65% 0%",
       }}
+      onClick={handleEmailClick}
     >
-      <div className="flex flex-col justify-between h-full p-6 bg-red-300 rounded-3xl text-black">
+      <div className="flex flex-col justify-between h-full p-6 bg-gray-300 rounded-3xl text-black">
         <div className="flex justify-between items-start">
           <p
             className={`text-base font-light transition-opacity duration-500 ${
