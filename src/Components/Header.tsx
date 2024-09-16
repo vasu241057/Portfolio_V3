@@ -22,7 +22,7 @@ const Header: React.FC<HeroProps> = ({ isVisible }) => {
 
   return (
     <header
-      className={`flex overflow-hidden flex-col justify-center mt-1 px-6 py-7 w-full font-light text-black bg-gray-100 rounded-3xl max-md:px-5 max-md:max-w-full transition-all duration-[1500ms] ease-in-out ${
+      className={`flex overflow-hidden flex-col justify-center mt-1 px-6 py-4 w-full font-light text-black bg-gray-100 rounded-3xl max-md:px-5 max-md:max-w-full transition-all duration-[1500ms] ease-in-out ${
         animation === "initial"
           ? "scale-x-0 scale-y-0 opacity-0"
           : "scale-x-1 scale-y-1 opacity-100"

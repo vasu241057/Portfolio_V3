@@ -38,10 +38,10 @@ const HeroSection: React.FC<HeroProps> = ({ isVisible }) => {
   }, []);
 
   return (
-    <section className="h-full relative">
+    <section className="h-[67%] relative">
       <div className="flex h-full gap-5 max-md:flex-col">
         <div
-          className={`flex flex-col w-[63%] max-md:w-full h-full bg-gray-100 rounded-3xl text-black overflow-hidden transition-all duration-[1500ms] ease-in-out ${
+          className={`flex flex-col w-[63%] max-md:w-full  bg-gray-100 rounded-3xl text-black overflow-hidden transition-all duration-[1500ms] ease-in-out ${
             animation === "initial"
               ? "scale-x-0 scale-y-0 opacity-0"
               : animation === "revealing"
@@ -52,11 +52,11 @@ const HeroSection: React.FC<HeroProps> = ({ isVisible }) => {
             transformOrigin: "100% 30%",
           }}
         >
-          <div className="flex flex-col justify-between h-full px-6 py-9">
+          <div className="flex flex-col justify-between h-full px-6 py-6">
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/5a732317479bceb5aabbed11b61261399456bc6dd7fdf342a5128b66dec28ad8?placeholderIfAbsent=true&apiKey=82a1a1af3ce94a618a51fd1a3ee38d91"
-              className={`object-contain self-end w-[119px] aspect-square transition-opacity duration-500 ${
+              className={`object-contain self-end w-[100px] aspect-square transition-opacity duration-500 ${
                 showText ? "opacity-100" : "opacity-0"
               }`}
               alt=""
@@ -67,6 +67,7 @@ const HeroSection: React.FC<HeroProps> = ({ isVisible }) => {
               }`}
             >
               Backend Engineer
+              <br />
               <span className="text-lg italic font-light">ok, Got it</span>
               <br />
               FullStack

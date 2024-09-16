@@ -11,7 +11,7 @@ const SocialIcons = ({ isVisible }: { isVisible: boolean }) => {
     }
   }, [isVisible]);
   return (
-    <ul className="flex  space-x-4 example-2">
+    <ul className="flex space-x-4 example-2">
       {/* LinkedIn */}
       <li
         className={`relative icon-content transition-transform duration-1000 ease-in-out ${

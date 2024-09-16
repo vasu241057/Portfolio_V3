@@ -28,7 +28,7 @@ const ContactSection: React.FC<HeroProps> = ({ isVisible }) => {
   return (
     <section
       id="contact"
-      className={`w-1/2 h-full max-md:w-full transition-all duration-[1500ms] ease-in-out ${
+      className={`w-2/5 h-full max-md:w-full transition-all duration-[1500ms] ease-in-out ${
         animation === "initial"
           ? "scale-x-0 scale-y-0 opacity-0"
           : "scale-x-1 scale-y-1 opacity-100"

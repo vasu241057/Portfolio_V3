@@ -11,3 +11,79 @@
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+@keyframes flipLeftToRight {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes flipRightToLeft {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-90deg);
+  }
+}
+
+.rotate-y-90 {
+  animation: flipLeftToRight 0.5s forwards;
+}
+
+.rotate-y-\[-90deg\] {
+  animation: flipRightToLeft 0.5s forwards;
+}
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+@keyframes flipRight360 {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(-360deg);
+  }
+}
+
+@keyframes flipLeft360 {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.flip-right-360 {
+  animation: flipRight360 0.5s forwards;
+}
+
+.flip-left-360 {
+  animation: flipLeft360 0.5s forwards;
+}
+
+.content-wrapper {
+  min-height: 400px; /* Adjust this value based on your content */
+  width: 100%;
+}
+
+/* Ensure consistent width for all tab contents */
+.content-wrapper > div {
+  width: 100%;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

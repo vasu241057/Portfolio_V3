@@ -23,7 +23,7 @@ const AboutSection: React.FC<HeroProps> = ({ isVisible }) => {
   return (
     <section
       id="about"
-      className={`w-1/2 max-md:w-full transition-all duration-[1500ms] ease-in-out ${
+      className={`w-3/5 max-md:w-full transition-all duration-[1500ms] ease-in-out ${
         animation === "initial"
           ? "scale-x-0 scale-y-0 opacity-0"
           : "scale-x-1 scale-y-1 opacity-100"
@@ -46,10 +46,9 @@ const AboutSection: React.FC<HeroProps> = ({ isVisible }) => {
             showText ? "opacity-100" : "opacity-0"
           }`}
         >
-          Full-stack dev from Jaipur. , NodeJS, Nest expert,ReactJS, NextJS
-          ,Go,. Database whiz. Competitive coder. Curiosity-driven
-          problem-solver. Let's build something remarkable – no peacock dance
-          required.
+          Full-stack dev from Jaipur. NodeJS, NestJS, ReactJS, NextJS, Go.
+          Competitive coder. Curiosity-driven problem-solver. Let's build
+          something remarkable – no peacock dance required.
         </p>
       </div>
     </section>
