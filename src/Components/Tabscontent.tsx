@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const TabsComponent = () => {
+interface TabsComponentProps {
+  onTabChange: (tab: string) => void; // new prop to notify parent component
+}
+
+const TabsComponent: React.FC<TabsComponentProps> = ({ onTabChange }) => {
   const [activeTab, setActiveTab] = useState("Profile");
 
   const handleTabClick = (tab: string) => {
     setActiveTab(tab);
+    onTabChange(tab); // call the parent function on tab change
   };
 
   return (
@@ -32,7 +37,7 @@ const TabsComponent = () => {
           <a
             href="#"
             onClick={() => handleTabClick("Profile")}
-            className={`inline-block w-full p-4 border-r border-gray-200 rounded-s-lg  hover:bg-gray-50 active focus:outline-none transition-transform duration-300 ease-in-out ${
+            className={`inline-block w-full p-4 border-r border-gray-200 rounded-s-lg hover:bg-gray-50 focus:outline-none transition-transform duration-300 ease-in-out ${
               activeTab === "Profile" ? "bg-gray-200" : ""
             }`}
           >
@@ -42,9 +47,9 @@ const TabsComponent = () => {
         <li className="w-full focus-within:z-10">
           <a
             href="#"
-            onClick={() => handleTabClick("Dashboard")}
+            onClick={() => handleTabClick("Work-Experience")}
             className={`inline-block w-full p-4 border-r border-gray-200 hover:text-gray-700 hover:bg-gray-50 focus:outline-none transition-transform duration-300 ease-in-out ${
-              activeTab === "Dashboard" ? "bg-gray-200" : ""
+              activeTab === "Work-Experience" ? "bg-gray-200" : ""
             }`}
           >
             Work-Experience
@@ -53,9 +58,9 @@ const TabsComponent = () => {
         <li className="w-full focus-within:z-10">
           <a
             href="#"
-            onClick={() => handleTabClick("Settings")}
-            className={`inline-block w-full p-4 border-r border-gray-200 rounded-e-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none transition-transform duration-300 ease-in-out ${
-              activeTab === "Settings" ? "bg-gray-200" : ""
+            onClick={() => handleTabClick("Skills")}
+            className={`inline-block w-full p-4 border-r border-gray-200 rounded-e-lg hover:text-gray-700 hover:bg-gray-50 focus:outline-none transition-transform duration-300 ease-in-out ${
+              activeTab === "Skills" ? "bg-gray-200" : ""
             }`}
           >
             Skills
