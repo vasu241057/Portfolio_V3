@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Projects.css";
 import SocialIcons from "./SocialIcons";
+import TabsComponent from "./Tabscontent";
 
 interface Project {
   name: string;
@@ -46,39 +47,6 @@ const projects: Project[] = [
   },
 ];
 
-interface WorkExperience {
-  // Define the structure for work experience data
-  company: string;
-  role: string;
-  duration: string;
-  description: string;
-}
-
-const workExperiences: WorkExperience[] = [
-  // Add your work experience data here
-  {
-    company: "Example Corp",
-    role: "Software Engineer",
-    duration: "2020 - Present",
-    description:
-      "Developed and maintained web applications using React and Node.js.",
-  },
-  // Add more work experiences as needed
-];
-
-interface Skill {
-  name: string;
-  level: number; // 1-5 for example
-}
-
-const skills: Skill[] = [
-  // Add your skills data here
-  { name: "React", level: 5 },
-  { name: "TypeScript", level: 4 },
-  { name: "Node.js", level: 4 },
-  // Add more skills as needed
-];
-
 interface HeroProps {
   isVisible: boolean;
 }
@@ -86,34 +54,38 @@ interface HeroProps {
 const ProjectsSection: React.FC<HeroProps> = ({ isVisible }) => {
   const [hover, setHover] = useState<number | null>(0);
   const [animation, setAnimation] = useState("initial");
-  const [flipDirection, setFlipDirection] = useState<"left" | "right" | null>(
-    null
-  );
-  const [activeTab, setActiveTab] = useState("Projects");
 
-  const handleTabChange = (newTab: string) => {
-    const tabOrder = ["Projects", "Work-Experience", "Skills"];
-    const currentIndex = tabOrder.indexOf(activeTab);
-    const newIndex = tabOrder.indexOf(newTab);
-
-    if (currentIndex < newIndex) {
-      setFlipDirection("right");
-    } else if (currentIndex > newIndex) {
-      setFlipDirection("left");
+  useEffect(() => {
+    if (isVisible) {
+      setTimeout(() => {
+        setAnimation("revealing");
+      }, 100);
+      setTimeout(() => {
+        setAnimation("final");
+      }, 1000);
     }
+  }, [isVisible]);
 
-    setAnimation("flipping");
-    setTimeout(() => {
-      setActiveTab(newTab);
-      setAnimation("final");
-      setFlipDirection(null);
-    }, 1000); // Half of the flip animation duration
-  };
-  const renderContent = () => {
-    switch (activeTab) {
-      case "Projects":
-        return (
-          <div className="overflow-y-auto my-8  md:h-[80.3%] hide-scrollbar">
+  return (
+    <aside
+      id="projects"
+      className="flex flex-col ml-5 max-md:ml-0 max-md:w-full md:max-h-full"
+    >
+      <div className="grid grid-rows-12 grow text-black whitespace-nowrap max-md:mt-7 max-md:max-w-full md:grid-row- md:max-h-full md:gap-5 ">
+        <div
+          className={`flex overflow-hidden flex-col px-8 py-6 w-full text-2xl font-medium bg-gray-100 rounded-3xl max-md:px-5 max-md:max-w-full row-span-10 transition-transform duration-[1500ms]  ease-in-out ${
+            animation === "initial"
+              ? "scale-x-0 scale-y-0 opacity-0" // Start from a point
+              : "scale-x-1 scale-y-1 opacity-100" // Final state
+          }`}
+          style={{
+            transformOrigin: "0% 30%",
+          }}
+        >
+          <div className="flex gap-5 justify-center">
+            <TabsComponent />
+          </div>
+          <div className="overflow-y-auto my-8  md:h-[89.3%] hide-scrollbar">
             {projects.map((project, index) => (
               <div
                 key={project.name}
@@ -204,84 +176,9 @@ const ProjectsSection: React.FC<HeroProps> = ({ isVisible }) => {
               </div>
             ))}
           </div>
-        );
-      case "Work-Experience":
-        return (
-          <div className="overflow-y-auto my-8 md:h-[80.3%] hide-scrollbar w-full">
-            {workExperiences.map((experience, index) => (
-              <div key={index} className="mb-6">
-                <h3 className="text-xl font-semibold">{experience.company}</h3>
-                <p className="text-lg">{experience.role}</p>
-                <p className="text-sm text-gray-600">{experience.duration}</p>
-                <p className="mt-2">{experience.description}</p>
-              </div>
-            ))}
-          </div>
-        );
-      case "Skills":
-        return (
-          <div className="overflow-y-auto my-8 md:h-[80.3%] hide-scrollbar">
-            {skills.map((skill, index) => (
-              <div key={index} className="mb-4">
-                <div className="flex justify-between">
-                  <span>{skill.name}</span>
-                  <span>{skill.level}/5</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    className="bg-blue-600 h-2.5 rounded-full"
-                    style={{ width: `${(skill.level / 5) * 100}%` }}
-                  ></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        );
-    }
-  };
-
-  useEffect(() => {
-    if (isVisible) {
-      setTimeout(() => {
-        setAnimation("revealing");
-      }, 100);
-      setTimeout(() => {
-        setAnimation("final");
-      }, 1000);
-    }
-  }, [isVisible]);
-
-  return (
-    <aside
-      id="projects"
-      className="flex flex-col ml-5 max-md:ml-0 max-md:w-full md:max-h-full mb-4 "
-    >
-      <div className="flex flex-col grow text-black whitespace-nowrap max-md:mt-7 max-md:max-w-full md:grid-row- md:max-h-full md:gap-5 ">
-        <div
-          className={`flex overflow-hidden flex-col px-8 pt-7 pb-7 w-full text-2xl font-medium bg-gray-100 rounded-3xl max-md:px-5 max-md:max-w-full transition-all duration-2000 ease-in-out ${
-            animation === "initial"
-              ? "scale-x-0 scale-y-0 opacity-0"
-              : animation === "flipping"
-              ? flipDirection === "right"
-                ? "flip-right-360"
-                : "flip-left-360"
-              : "scale-x-100 scale-y-100 opacity-100"
-          }`}
-          style={{
-            transformOrigin: "center",
-            perspective: "1000px",
-          }}
-        >
-          <div className=" gap-5 justify-center">
-            <TabsComponent
-              activeTab={activeTab}
-              onTabChange={handleTabChange}
-            />
-            <div className="content-wrapper">{renderContent()}</div>
-          </div>
         </div>
         <nav
-          className={`flex overflow-hidden flex-col justify-center px-14 py-9  w-full text-base font-light uppercase bg-gray-100 rounded-3xl max-md:px-5 max-md:max-w-full md:max-h-[20%] transition-transform duration-[1500ms] ease-in-out ${
+          className={`flex overflow-hidden flex-col justify-center px-14 py-9  w-full text-base font-light uppercase bg-gray-100 rounded-3xl max-md:px-5 max-md:max-w-full  row-span-2 transition-transform duration-[1500ms] ease-in-out ${
             animation === "initial"
               ? "scale-x-0 scale-y-0 opacity-0"
               : "scale-x-1 scale-y-1 opacity-100"
@@ -294,69 +191,6 @@ const ProjectsSection: React.FC<HeroProps> = ({ isVisible }) => {
         </nav>
       </div>
     </aside>
-  );
-};
-
-const TabsComponent: React.FC<{
-  activeTab: string;
-  onTabChange: (tab: string) => void;
-}> = ({ activeTab, onTabChange }) => {
-  return (
-    <div>
-      {/* Mobile View */}
-      <div className="md:hidden">
-        <label htmlFor="tabs" className="sr-only">
-          Select your tab
-        </label>
-        <select
-          id="tabs"
-          className="bg-gray-100 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5"
-          onChange={(e) => onTabChange(e.target.value)}
-          value={activeTab}
-        >
-          <option value="Projects">Projects</option>
-          <option value="Work-Experience">Work Experience</option>
-          <option value="Skills">Skills</option>
-        </select>
-      </div>
-
-      {/* Desktop View */}
-      <ul className="hidden text-sm font-medium text-center text-black rounded-lg shadow sm:flex bg-gray-100">
-        <li className="w-full focus-within:z-10">
-          <a
-            href="#"
-            onClick={() => onTabChange("Projects")}
-            className={`inline-block w-full p-4 border-r border-gray-200 rounded-s-lg hover:bg-gray-50 active focus:outline-none transition-transform duration-300 ease-in-out ${
-              activeTab === "Projects" ? "bg-gray-200" : ""
-            }`}
-          >
-            Projects
-          </a>
-        </li>
-        <li className="w-full focus-within:z-10">
-          <a
-            href="#"
-            onClick={() => onTabChange("Work-Experience")}
-            className={`inline-block w-full p-4 border-r border-gray-200 hover:text-gray-700 hover:bg-gray-50 focus:outline-none transition-transform duration-300 ease-in-out ${
-              activeTab === "Work-Experience" ? "bg-gray-200" : ""
-            }`}
-          >
-            Work-Experience
-          </a>
-        </li>
-        <li className="w-full focus-within:z-10">
-          <a
-            href="#"
-            onClick={() => onTabChange("Skills")}
-            className={`inline-block w-full p-4 border-r border-gray-200 rounded-e-lg hover:text-gray-700 hover:bg-gray-50 focus:outline-none transition-transform duration-300 ease-in-out ${
-              activeTab === "Skills" ? "bg-gray-200" : ""
-            }`}
-          >
-            Skills
-          </a>
-        </li>
-      </ul>
-    </div>
   );
 };
 

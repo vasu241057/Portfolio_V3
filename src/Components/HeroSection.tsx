@@ -38,10 +38,10 @@ const HeroSection: React.FC<HeroProps> = ({ isVisible }) => {
   }, []);
 
   return (
-    <section className="h-[67%] relative">
+    <section className="h-full ">
       <div className="flex h-full gap-5 max-md:flex-col">
         <div
-          className={`flex flex-col w-[63%] max-md:w-full  bg-gray-100 rounded-3xl text-black overflow-hidden transition-all duration-[1500ms] ease-in-out ${
+          className={`flex flex-col w-[71%] max-md:w-full  bg-gray-100 rounded-3xl text-black overflow-hidden transition-all duration-[1500ms] ease-in-out ${
             animation === "initial"
               ? "scale-x-0 scale-y-0 opacity-0"
               : animation === "revealing"
