@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface TabsComponentProps {
   onTabChange: (tab: string) => void; // new prop to notify parent component
