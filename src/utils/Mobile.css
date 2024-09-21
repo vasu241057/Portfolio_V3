@@ -1,0 +1,95 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  color: var(--headingText-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.btn {
+  padding: 12px 32px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background: var(--secondary-color);
+  color: #222;
+  border: 1px solid white;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  box-shadow: 4px 4px 7px var(--cardBoxShadow-color);
+}
+
+.btn-light {
+  background: transparent;
+  color: white;
+  border: 1px solid var(--secondary-color);
+}
+
+.btn:hover {
+  background: var(--secondaryHover-color);
+  color: white;
+  transition: 0.3s;
+}
+
+.submit-btn {
+  margin: 2rem 0;
+  padding: 12px 24px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background: var(--btn-color);
+  color: #fbfbfb;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.3rem;
+  box-shadow: 4px 4px 7px var(--cardBoxShadow-color);
+}
+
+.submit-btn:hover {
+  background: var(--secondaryHover-color);
+  transition: 0.3s;
+}
+
+.project-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background: var(--btn-color);
+  color: var(--normalText-color);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.3rem;
+  width: 155px;
+  box-shadow: 4px 4px 7px var(--cardBoxShadow-color);
+}
+
+.project-btn:hover {
+  background: var(--secondaryHover-color);
+  color: var(--normalText-color);
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 640px) {
+  .btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}

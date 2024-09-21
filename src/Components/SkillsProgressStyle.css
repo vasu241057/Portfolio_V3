@@ -1,0 +1,62 @@
+/* .skill {
+    width: 85vw;
+    margin: auto;
+    padding: 2rem 2rem;
+    background-color: var(--foreground-color);
+    border-radius: 1rem;
+}
+.skill h1 {
+    text-align: center;
+    padding: 0rem 0 1.5rem 0;
+}
+
+.progress {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    margin: auto;
+}
+
+.progress .circles {
+    width: 120px;
+    margin: 2rem 5rem;
+}
+
+.progress .skill-bundle {
+    width: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+
+    .skill {
+        width: 90vw;
+        padding: 2rem 2rem;
+    }
+
+    .progress {
+        padding-bottom: 1rem;
+    }
+    
+    .progress .circles {
+        width: 80px;
+        margin: 2rem 5rem;
+    }
+    
+    .progress .skill-bundle {
+        width: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+    
+    
+} */

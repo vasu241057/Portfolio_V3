@@ -1,0 +1,148 @@
+*{
+    color: var(--secondary-color);
+}
+
+.project {
+    width: 100%;
+    padding: 2rem 2rem;
+    margin: 3rem auto;
+}
+
+.project .project-heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    
+}
+
+
+/* Bg style purpose */
+
+.project-container::after,
+.project-container::before {
+    content: ' ';
+    width: 10rem;
+    height: 20rem;
+    border-radius: 20rem;
+    position: absolute;
+    z-index: -1;
+    filter: blur(200px);
+
+}
+
+.project-container::after{
+    background: #a50e0e;
+    left: 5rem;
+}
+
+.project-container::before{
+    background: #0354f6;
+    right: 5rem;
+}
+
+/* Bg style purpose */
+
+
+
+.project .projects-card {
+    width: 400px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--foreground-color);
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    transition: 0.3s ease;
+    /* box-shadow: 1px 2px 10px 5px var(--cardBoxShadow-color); */
+    box-shadow: 4px 4px 7px var(--cardBoxShadow-color);
+    
+}
+
+
+.project .projects-card:hover {
+    scale: 1.02;
+    background-color: var(--hoverDiv-color);
+    box-shadow: 0 0 10px 2px var(--hoverGlow-color);
+}
+
+.project-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.project .project-img img {
+    width: 100%;
+    border-radius: 1rem;
+    transition: 0.5s ease;
+}
+
+.project .project-img img:hover {
+    scale: 1.2;
+}
+
+.project h2 {
+    margin: 1rem auto;
+}
+
+.project p {
+    color: var(--normalText-color);
+    margin-bottom: 1rem;
+    padding: 0 0.3rem;
+    text-align: justify;
+    font-size: 0.9rem;
+    
+}
+
+.project-button {
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
+
+
+  @media screen and (max-width: 500px) {
+
+    .project {
+        padding: 2rem 1rem;
+        
+    }
+
+    .project .projects-card {
+        padding: 2rem 1.2rem 1rem;
+    }
+    
+    .project-button {
+        margin: 1rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+    
+    
+    .project-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        width: 120px;
+        
+      }
+  }

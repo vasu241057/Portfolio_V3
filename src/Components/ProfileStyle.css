@@ -1,0 +1,152 @@
+.profile {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.profile .profile-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  overflow: hidden;
+}
+
+.profile-container::after,
+.profile-container::before {
+  content: " ";
+  width: 10rem;
+  height: 20rem;
+  border-radius: 20rem;
+  position: absolute;
+  z-index: -1;
+  filter: blur(150px);
+}
+
+.profile-container::after {
+  background: #6d0886b1;
+  left: 5rem;
+}
+.profile-container::before {
+  background: #066bdf53;
+  right: 5rem;
+}
+
+.profile .profile-container .left .bubble {
+  background-image: url(/src/assets/vasu_linkedin.jpg);
+  width: 380px;
+  height: 380px;
+  background-size: cover;
+  background-position: center right 25%;
+  margin: 20px;
+  box-shadow: 0 0 5px 5px rgba(0, 75, 132, 0.512);
+  animation: animate 5s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
+
+.profile .profile-container .right {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 70vh;
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 0 0 0 3rem;
+}
+
+.profile .profile-container .right .designation {
+  font-size: 1.2rem;
+}
+
+.profile .profile-container .right .about-text {
+  margin: 1rem 0;
+  color: var(--normalText-color);
+}
+
+.social-link {
+  margin-top: 0rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+  gap: 1rem;
+}
+
+.social-icon-cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cv {
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .profile {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0;
+    padding: 0.5rem 1rem;
+  }
+
+  .profile .profile-container {
+    margin: 0 auto;
+    padding: 3rem 0.3rem;
+  }
+
+  .profile .profile-container .left .bubble {
+    width: 180px;
+    height: 180px;
+    background-size: cover;
+    background-position: center right 25%;
+    margin: 2rem 0;
+  }
+
+  .profile .profile-container .right {
+    width: 100%;
+    max-width: 360px;
+    height: 100%;
+    max-height: 70vh;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .social-icon-cv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-link {
+    margin-top: 1rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .cv {
+    margin: 1rem 0;
+  }
+}

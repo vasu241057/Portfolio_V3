@@ -1,0 +1,72 @@
+.skills-info-card {
+  width: 45vw;
+  min-height: 23rem;
+  border: 1.5px solid rgba(89, 0, 152, 0.68);
+  border-radius: 0.65rem;
+  backdrop-filter: blur(1rem);
+}
+
+.skills-info-card h6 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(180deg, rgb(128, 0, 167), rgb(108, 17, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 1.5px solid rgb(89, 0, 152);
+}
+
+.skills-info-content {
+  padding: 2rem;
+}
+
+.skills-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills-info p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.skills-info .percentage {
+  color: var(--normalText-color: );
+}
+
+.skills-progress-bg {
+  width: 100%;
+  height: 0.5rem;
+  background: #9103d245;
+  border-radius: 0.5rem;
+  margin: 1rem 0 2rem 0;
+  overflow: hidden;
+}
+
+.skills-progress {
+  width: 0%;
+  height: 0.5rem;
+  background: linear-gradient(
+    270deg,
+    rgba(128, 0, 167, 0.616),
+    rgba(108, 17, 255, 0.676)
+  );
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 1070px) {
+  .skills-info-card {
+    width: 85vw;
+    min-height: 25rem;
+    border: 1.5px solid rgba(89, 0, 152, 0.724);
+    border-radius: 0.65rem;
+    backdrop-filter: blur(1rem);
+  }
+
+  .skills-info-content {
+    padding: 1.5rem;
+  }
+}

@@ -1,22 +1,13 @@
-import { useEffect, useState } from "react";
-import Layout from "./Components/Layout";
-import MainContent from "./Components/MainContent";
+// App.tsx
+import React from "react";
+import { useMediaQuery } from "react-responsive";
+import MobileApp from "./MobileApp";
+import DesktopApp from "./DesktopApp";
 
-function App() {
-  const [showContent, setShowContent] = useState(false);
+const App: React.FC = () => {
+  const isMobileOrTablet = useMediaQuery({ maxWidth: 1210 });
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowContent(true);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-  return (
-    <Layout isVisible={showContent}>
-      <MainContent isVisible={showContent} />
-    </Layout>
-  );
-}
+  return isMobileOrTablet ? <MobileApp /> : <DesktopApp />;
+};
 
 export default App;

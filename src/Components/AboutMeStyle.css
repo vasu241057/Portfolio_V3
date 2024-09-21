@@ -1,0 +1,95 @@
+
+.aboutMe-container {
+    width: 100%;
+    height: 100%;
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+/* Bg style purpose */
+
+.aboutMe-container::after,
+.aboutMe-container::before {
+    content: ' ';
+    width: 10rem;
+    height: 20rem;
+    border-radius: 20rem;
+    position: absolute;
+    z-index: -1;
+    filter: blur(350px);
+
+}
+
+.aboutMe-container::after{
+    background: #0249ada6;
+    left: 5rem;
+}
+
+.aboutMe-container::before{
+    background: #0354f6b2;
+    right: 5rem;
+}
+
+/* Bg style purpose */
+
+
+.aboutMe-container .left {
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+    max-width: 450px;
+}
+
+.aboutMe-container .left p {
+    color: var( --normalText-color);
+    margin-top: 1.5rem;
+    text-align: justify;
+}
+
+.aboutMe-container .right {
+    max-width: 600px;
+    margin-right: 7rem;
+
+}
+
+.aboutMe-container .right .aboutMe-img {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+
+.right img {
+    max-width: 90%;
+    border: 1px solid var(--normalText-color);
+}
+
+.right .top {
+    grid-column: 1/ span 8;
+    grid-row: 1;
+    padding-top: 20%;
+    z-index: 6;
+}
+
+.right .bottom {
+    grid-column: 4/ -1;
+    grid-row: 1;
+    z-index: 5;
+}
+
+
+
+@media screen and (max-width: 1100px) {
+
+    .aboutMe-container .right {
+        margin-right: 0rem;
+    
+    }
+    
+}
