@@ -1,9 +1,9 @@
 import React from "react";
 
-import Footer from "../components/Footer.tsx";
-import HeroAll from "../components/HeroAll.tsx";
-import ProjectCards from "../components/ProjectCards.tsx";
-import NavBar from "../components/NavBar.tsx";
+import Footer from "./Footer.tsx";
+import HeroAll from "./HeroAll.tsx";
+import ProjectCards from "./ProjectCards.tsx";
+import NavBar from "./NavBar.tsx";
 
 const Project: React.FC = () => {
   return (

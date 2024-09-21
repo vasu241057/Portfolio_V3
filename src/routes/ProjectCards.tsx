@@ -1,6 +1,8 @@
 import React from "react";
-import ProjectCard from "./ProjectCard";
 import { ProjectCardData } from "./Data";
+import ProjectCard from "./ProjectCard";
+// import ProjectCard from "./ProjectCard";
+// import { ProjectCardData } from "./Data";
 
 const ProjectCards: React.FC = () => {
   return (

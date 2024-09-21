@@ -1,10 +1,11 @@
 import React from "react";
 
-import HeroAll from "../components/HeroAll.tsx";
-import AboutMe from "../components/AboutMe.tsx";
-import Skills from "../components/skills/Skills.tsx";
-import NavBar from "../components/NavBar.tsx";
-import Footer from "../components/Footer.tsx";
+import HeroAll from "./HeroAll.tsx";
+import AboutMe from "./AboutMe.tsx";
+// import Skills from "../components/skills/Skills.tsx";
+import NavBar from "./NavBar.tsx";
+import Footer from "./Footer.tsx";
+import Skills from "./skills/Skills.tsx";
 
 const About: React.FC = () => {
   return (

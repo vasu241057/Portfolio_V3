@@ -1,8 +1,8 @@
 import React from "react";
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import HeroAll from "../components/HeroAll";
-import Form from "../components/Form";
+import NavBar from "./NavBar";
+import Footer from "./Footer";
+import HeroAll from "./HeroAll";
+import Form from "./Form";
 
 const Contact: React.FC = () => {
   return (

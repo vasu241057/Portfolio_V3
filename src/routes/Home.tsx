@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
-import NavBar from "../components/NavBar.tsx";
-import Hero from "../components/Hero.tsx";
-import Footer from "../components/Footer.tsx";
-import ProjectCards from "../components/ProjectCards.tsx";
-import Profile from "../components/Profile.tsx";
-import Skills from "../components/skills/Skills.tsx";
-import WorkExperience from "../components/work-Ex.tsx";
-import Loader, { loadingListener } from "../components/loader.tsx";
+import NavBar from "./NavBar.tsx";
+import Hero from "./Hero.tsx";
+import Footer from "./Footer.tsx";
+import ProjectCards from "./ProjectCards.tsx";
+import Profile from "./Profile.tsx";
+// import Skills from "../components/skills/Skills.tsx";
+import WorkExperience from "./work-Ex.tsx";
+import Loader, { loadingListener } from "./loader.tsx";
+import Skills from "./skills/Skills.tsx";
 
 // import SkillsProgress from '../components/SkillsProgress'
 

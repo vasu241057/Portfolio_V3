@@ -1,6 +1,6 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
-import styles from "../components/styles/timeline.module.css";
+import styles from "./styles/timeline.module.css";
 import Timeline from "./timeline";
 
 const WorkExperience: React.FC = () => {

@@ -2,7 +2,7 @@ import React from "react";
 import { data } from "./work.tsx";
 import { Fade } from "react-awesome-reveal";
 import { MdWork } from "react-icons/md";
-import styles from "../components/styles/timeline.module.css";
+import styles from "./styles/timeline.module.css";
 
 const Timeline: React.FC = () => {
   return (

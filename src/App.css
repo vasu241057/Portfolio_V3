@@ -1,4 +1,4 @@
-@import "./components/loader.css";
+@import "./routes/loader.css";
 
 .dark-theme {
   --background-color: #121922;
