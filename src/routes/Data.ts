@@ -4,6 +4,7 @@ import jamming from "../assets/projects/jamming.jpg";
 import website_v1 from "../assets/projects/website_v1.jpg";
 import Recipe from "../assets/projects/Recipe.jpg";
 import processing from "../assets/projects/Image-processing.png";
+import P2P from "../assets/projects/P2P.jpeg";
 
 //pricing cards
 
@@ -31,6 +32,14 @@ export const PricingCardData = [
 //Projects card
 
 export const ProjectCardData = [
+  {
+    image: P2P,
+    alt: "P2P File-Transfer",
+    title: "P2P File-Transfer",
+    text: "A P2P file-sharing website that enables instant file transfers between two users via WebSocket using a passcode, built with Express, TypeScript, Prisma, and WebSocket.",
+    git: "https://github.com/vasu241057/e-commerce",
+    link: "https://p2-p-frontend.vercel.app/websocket",
+  },
   {
     image: eShopping,
     alt: " e-commerce",
