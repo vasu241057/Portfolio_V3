@@ -14,10 +14,18 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: "P2P File-Transfer",
+    imageSrc: "/P2P.jpeg",
+    githubLink: "https://github.com/vasu241057/e-commerce",
+    projectLink: "https://p2-p-frontend.vercel.app/websocket",
+    codeExplanation:
+      "A P2P file-sharing website that enables instant file transfers between two users via WebSocket using a passcode, built with Express, TypeScript, Prisma, and WebSocket.",
+  },
+  {
     name: "E-commerce",
     imageSrc: "/e-commerce.jpg",
-    githubLink: "https://github.com/vasu241057/e-commerce",
-    projectLink: "https://e-commerce-vasu.vercel.app/",
+    githubLink: "https://github.com/vasu241057/Portfolio_V3",
+    projectLink: "https://portfolio-v3-neon-nine.vercel.app/",
     codeExplanation:
       "e-Shopping is an e-commerce platform for efficiently setting up and managing online stores.",
   },
@@ -97,7 +105,7 @@ const ProjectsSection: React.FC<HeroProps> = ({ isVisible }) => {
           }}
         >
           <div className="flex gap-5 justify-center">
-            <TabsComponent onTabChange={handleTabChange}  />
+            <TabsComponent onTabChange={handleTabChange} />
           </div>
           <div className="overflow-y-auto my-8 hide-scrollbar">
             {activeTab === "Profile" &&
